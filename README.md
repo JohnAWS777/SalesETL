@@ -44,13 +44,13 @@ This project involves:
 ### Building the Data Warehouse (Data Engineering)
 
 #### Objective
-Develop a modern data warehouse using Microsoft Fabric to consolidate logistics data, enabling analytical reporting and informed decision-making.
+Develop a modern dimensional model using Microsoft Fabric to consolidate sales data, enabling analytical reporting and informed decision-making.
 
 #### Specifications
-- **Data Sources**: Import data from a hotel company provided as CSV file.
+- **Data Sources**: Import data from Adventureworks provided as an Azure SQL Database.
 - **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
-- **Transformation**: Build a dimensional model using the file from the Silver layer.
-- **Scope**: Focus on the latest dataset only; historization of data is not required.
+- **Transformation**: Build a dimensional model using the tables from the Silver layer.
+- **Scope**: Historization of data is required.
 - **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
 
 ---
@@ -60,26 +60,24 @@ Develop a modern data warehouse using Microsoft Fabric to consolidate logistics 
 #### Objective
 Develop SQL-based analytics to deliver detailed insights into:
 - **Customer Behavior**
-- **Booking Performance**
-- **Deposit Trends**
+- **Sales by region**
+- **Product Trends**
 
 These insights empower stakeholders with key business metrics, enabling strategic decision-making. 
 ## 📂 Repository Structure
 ```
-Fabric_ETL_Gen2/
-│
-├── 0.DataSource/                       # Raw dataset used for the project
+SalesETL/
 │
 ├── 1.BronceLayer/                      # Explains the bronce layer
 │   ├── Flow.md                         # This file shows the processes developed in the Bronce stage
 ├── 2.SilverLayer/                      # Explains the silver layer
 │   ├── Flow.md                           # This file shows the processes developed in the Silver stage
-│   ├── DW_Silver.sql                      # This file shows the SQL code used in this phase
+│   ├── Python notebooks                  # These files are referenced in the Flow.md file
 ├── 3.GoldLayer/                        # Explains the gold layer
 │   ├── Flow.md                           # This file shows the processes developed in the Gold stage
-│   ├── DW_Gold.sql                      # This file shows the SQL code used in this phase
+│   ├── Python notebooks                  # These files are referenced in the Flow.md file
 ├── 4.SemanticModel/                    # Explains the semantic model
-│   ├── DimensionalModel.md               # This file shows the processes involved to create the semantic model
+│   ├── DimensionalModel.md               # This file shows the final semantic model
 │
 ├── README.md                           # Project overview and instructions
 ├── LICENSE                             # License information for the repository
