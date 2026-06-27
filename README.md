@@ -2,6 +2,8 @@
 # Fabric_ETL_Sales
 This project will create an ETL from scratch using a Lakehouse, a pipeline, and notebooks, based on the following architecture:  
 <img width="1037" height="572" alt="image" src="https://github.com/user-attachments/assets/d2cd584b-3ebb-4769-b292-e94c26d71908" />
+The ETL works using the following pipeline: 
+<img width="1037" height="572" alt="image" src="https://github.com/user-attachments/assets/353d5ea2-4774-4201-b308-cd02419b5989" />
 
 
 ---
