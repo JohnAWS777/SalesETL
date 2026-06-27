@@ -10,7 +10,7 @@ The ETL works using the following pipeline:
 
 The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
 
-1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from a CSV File into a Delta Table.
+1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from an Azure SQL Database into a folder in a Lakehouse.
 2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
 3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
 
@@ -35,7 +35,7 @@ This project involves:
 ---
 
 ## 🛠️ Important Links & Tools:
-- **[Microsoft Learn](https://learn.microsoft.com/en-us/training/modules/use-dataflow-gen-2-fabric/):** Explain the Gen2 tool that makes possible the ingestion process in the project.
+- **[Microsoft](https://learn.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver17&tabs=ssms):** It shows the .bak file AdventureWorksLT2025.bak which is the Azure SQL used in this project.
 - **[DrawIO](https://www.drawio.com/):** Design data architecture, models, flows, and diagrams.
 ---
 
